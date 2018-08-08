@@ -8,7 +8,6 @@
       <img src="https://img.shields.io/npm/v/lambda-dev.svg?style=flat-square">
     </a>
   <br/>
-  <hr/>
 </div>
 
 ## Installation
@@ -28,7 +27,7 @@ lambda-dev serve --help
 lambda-dev serve src/functions --node 8.10 --port 9000 --basePath /lambda
 ```
 
-Now a given function `src/functions/test.js` will be invocated with requests to `http://localhost:9000/lambda/test`.
+Now a given function `src/functions/test.js` will be invoked with requests to `http://localhost:9000/lambda/test`.
 
 ### Build
 
