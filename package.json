@@ -1,6 +1,6 @@
 {
   "name": "lambda-dev",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Develop and Bundle Your Lambda Functions With Ease",
   "author": "Iiro Jäppinen <iiro@jappinen.fi> (https://iiro.fi)",
   "license": "MIT",
@@ -8,6 +8,7 @@
   "repository": "gitlab:iiroj/lambda-dev",
   "bugs": "https://gitlab.com/iiroj/lambda-dev/issues",
   "bin": "index.js",
+  "main": "index.js",
   "scripts": {
     "lint": "eslint .",
     "serve": "node . serve __tests__",
@@ -15,6 +16,14 @@
   },
   "engines": {
     "node": ">= 8.10"
+  },
+  "dependencies": {
+    "@babel/core": "^7.0.0-beta.56",
+    "@babel/preset-env": "^7.0.0-beta.56",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "make-dir": "^1.3.0",
+    "yargs": "^12.0.1"
   },
   "devDependencies": {
     "eslint": "^5.2.0",
@@ -35,13 +44,5 @@
     "local-server",
     "preset-env",
     "serverless"
-  ],
-  "dependencies": {
-    "@babel/core": "^7.0.0-beta.56",
-    "@babel/preset-env": "^7.0.0-beta.56",
-    "body-parser": "^1.18.3",
-    "express": "^4.16.3",
-    "make-dir": "^1.3.0",
-    "yargs": "^12.0.1"
-  }
+  ]
 }
