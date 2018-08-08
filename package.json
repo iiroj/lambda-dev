@@ -1,6 +1,6 @@
 {
   "name": "lambda-dev",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Develop and Bundle Your Lambda Functions With Ease",
   "author": "Iiro Jäppinen <iiro@jappinen.fi> (https://iiro.fi)",
   "license": "MIT",
@@ -8,7 +8,10 @@
   "repository": "gitlab:iiroj/lambda-dev",
   "bugs": "https://gitlab.com/iiroj/lambda-dev/issues",
   "bin": "index.js",
-  "main": "index.js",
+  "files": [
+    "index.js",
+    "lib"
+  ],
   "scripts": {
     "lint": "eslint .",
     "serve": "node . serve __tests__",
