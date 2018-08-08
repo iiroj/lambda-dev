@@ -1,4 +1,5 @@
-<h1 align="center">lambda-dev</h1>
+<h1 align="center">λ-dev</h1>
+<div align="center"><code>lambda-dev</code></div>
 
 <div align="center">
   <p>Develop and Bundle Your Lambda Functions With Ease</p>

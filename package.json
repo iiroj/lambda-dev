@@ -13,9 +13,7 @@
     "lib"
   ],
   "scripts": {
-    "lint": "eslint .",
-    "serve": "node . serve __tests__",
-    "build": "node . build __tests__ build"
+    "lint": "eslint ."
   },
   "engines": {
     "node": ">= 6.10"
