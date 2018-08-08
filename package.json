@@ -1,6 +1,6 @@
 {
   "name": "lambda-dev",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Develop and Bundle Your Lambda Functions With Ease",
   "author": "Iiro Jäppinen <iiro@jappinen.fi> (https://iiro.fi)",
   "license": "MIT",
@@ -18,7 +18,7 @@
     "build": "node . build __tests__ build"
   },
   "engines": {
-    "node": ">= 8.10"
+    "node": ">= 6.10"
   },
   "dependencies": {
     "@babel/core": "^7.0.0-beta.56",
