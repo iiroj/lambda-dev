@@ -72,7 +72,5 @@ type Event = {
 
 type Context = {} // Empty with `lambda-dev serve`
 
-type Callback = (err: Error | null, response: Response) => void;
-
-exports.handler: (event: Event, context: Context, callback: Callback) => callback(error: Error | null, response: Response | null);
+exports.handler: (event: Event, context: Context, callback) => callback(error: Error | null, response: Response | null);
 ```
