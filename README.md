@@ -3,10 +3,23 @@
   <code>lambda-dev</code>
   <br/>
     <p>Develop and Bundle Your Lambda Functions With Ease</p>
+  <a href="https://www.npmjs.com/package/lambda-dev"><strong>npm</strong></a> ·
+  <a href="https://gitlab.com/iiroj/lambda-dev"><strong>GitLab</strong></a>
   <br/>
-    <a href="https://www.npmjs.com/package/lambda-dev">
-      <img src="https://img.shields.io/npm/v/lambda-dev.svg?style=flat-square">
-    </a>
+  <br/>
+  <a href="https://www.npmjs.com/package/lambda-dev">
+    <img src="https://img.shields.io/npm/v/lambda-dev.svg?style=flat-square">
+  </a>
+  <a href="https://gitlab.com/iiroj/lambda-dev">
+    <img src="https://img.shields.io/github/languages/code-size/iiroj/lambda-dev.svg?style=flat-square">
+  </a>
+  <a href="https://gitlab.com/iiroj/lambda-dev/blob/master/package.json">
+    <img src="https://img.shields.io/david/iiroj/lambda-dev.svg?style=flat-square">
+  </a>
+  <a href="https://gitlab.com/iiroj/lambda-dev/blob/master/package.json">
+    <img src="https://img.shields.io/david/dev/iiroj/lambda-dev.svg?style=flat-square">
+  </a>
+  <br/>
   <br/>
 </div>
 
