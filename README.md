@@ -13,6 +13,9 @@
   <a href="https://gitlab.com/iiroj/lambda-dev">
     <img src="https://img.shields.io/github/languages/code-size/iiroj/lambda-dev.svg?style=flat-square">
   </a>
+  <a href="https://gitlab.com/iiroj/app-bar/pipelines/">
+    <img src="https://img.shields.io/badge/GitLab-Pipeline-lightgrey.svg?style=flat-square">
+  </a>
   <a href="https://gitlab.com/iiroj/lambda-dev/blob/master/package.json">
     <img src="https://img.shields.io/david/iiroj/lambda-dev.svg?style=flat-square">
   </a>
