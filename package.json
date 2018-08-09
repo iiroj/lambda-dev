@@ -13,10 +13,11 @@
     "lib"
   ],
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "jest --env node"
   },
   "engines": {
-    "node": ">= 6.10"
+    "node": ">= 8.10"
   },
   "dependencies": {
     "@babel/core": "^7.0.0-beta.56",
@@ -29,6 +30,7 @@
     "yargs": "^12.0.1"
   },
   "devDependencies": {
+    "command-line-test": "^1.0.10",
     "eslint": "^5.2.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-config-standard": "^11.0.0",
@@ -37,7 +39,9 @@
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-standard": "^3.1.0",
-    "prettier": "^1.14.0"
+    "jest": "^23.4.2",
+    "prettier": "^1.14.0",
+    "rimraf": "^2.6.2"
   },
   "keywords": [
     "babel",

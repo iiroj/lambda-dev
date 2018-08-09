@@ -2,7 +2,7 @@
   <h1 align="center">λ-dev</h1>
   <code>lambda-dev</code>
   <br/>
-    <p>Develop and Bundle Your Lambda Functions With Ease</p>
+  <p>Develop and Bundle Your Lambda Functions With Ease</p>
   <a href="https://www.npmjs.com/package/lambda-dev"><strong>npm</strong></a> ·
   <a href="https://gitlab.com/iiroj/lambda-dev"><strong>GitLab</strong></a>
   <br/>
