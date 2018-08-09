@@ -7,9 +7,9 @@
   "homepage": "https://gitlab.com/iiroj/lambda-dev",
   "repository": "gitlab:iiroj/lambda-dev",
   "bugs": "https://gitlab.com/iiroj/lambda-dev/issues",
-  "bin": "index.js",
+  "bin": "cli.js",
   "files": [
-    "index.js",
+    "cli.js",
     "lib"
   ],
   "scripts": {

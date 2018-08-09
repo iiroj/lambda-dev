@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`cli Build without entry argument 1`] = `
-[Error: Command failed: node . build
- build <entry> <target>
+[Error: Command failed: node cli.js build
+cli.js build <entry> <target>
 
 Bundle Lambda functions
 
@@ -21,8 +21,8 @@ Not enough non-option arguments: got 0, need at least 2
 `;
 
 exports[`cli Build without target argument 1`] = `
-[Error: Command failed: node . build test/fixtures
- build <entry> <target>
+[Error: Command failed: node cli.js build test/fixtures
+cli.js build <entry> <target>
 
 Bundle Lambda functions
 
@@ -41,8 +41,8 @@ Not enough non-option arguments: got 1, need at least 2
 `;
 
 exports[`cli Serve without entry argument 1`] = `
-[Error: Command failed: node . serve
- serve <entry>
+[Error: Command failed: node cli.js serve
+cli.js serve <entry>
 
 Lambda Development Server
 
@@ -63,12 +63,12 @@ Not enough non-option arguments: got 0, need at least 1
 `;
 
 exports[`cli Without arguments 1`] = `
-[Error: Command failed: node .
- <command>
+[Error: Command failed: node cli.js
+cli.js <command>
 
 Commands:
-  serve <entry>           Lambda Development Server
-  build <entry> <target>  Bundle Lambda functions
+  cli.js serve <entry>           Lambda Development Server
+  cli.js build <entry> <target>  Bundle Lambda functions
 
 Options:
   --help      Show help                                                [boolean]
