@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const serve = require('./lib/serve');
-const build = require('./lib/build');
+const { serve } = require('./lib/serve');
+const { build } = require('./lib/build');
 
 require('yargs')(process.argv.slice(2))
   .demandCommand(1)

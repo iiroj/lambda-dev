@@ -2,7 +2,7 @@
   <h1 align="center">λ-dev</h1>
   <code>lambda-dev</code>
   <br/>
-    <p>Develop and Bundle Your Lambda Functions With Ease</p>
+  <p>Develop and Bundle Your Lambda Functions With Ease</p>
   <a href="https://www.npmjs.com/package/lambda-dev"><strong>npm</strong></a> ·
   <a href="https://gitlab.com/iiroj/lambda-dev"><strong>GitLab</strong></a>
   <br/>
@@ -12,6 +12,9 @@
   </a>
   <a href="https://gitlab.com/iiroj/lambda-dev">
     <img src="https://img.shields.io/github/languages/code-size/iiroj/lambda-dev.svg?style=flat-square">
+  </a>
+  <a href="https://gitlab.com/iiroj/app-bar/pipelines/">
+    <img src="https://img.shields.io/badge/GitLab-Pipeline-lightgrey.svg?style=flat-square">
   </a>
   <a href="https://gitlab.com/iiroj/lambda-dev/blob/master/package.json">
     <img src="https://img.shields.io/david/iiroj/lambda-dev.svg?style=flat-square">
@@ -72,7 +75,5 @@ type Event = {
 
 type Context = {} // Empty with `lambda-dev serve`
 
-type Callback = (err: Error | null, response: Response) => void;
-
-exports.handler: (event: Event, context: Context, callback: Callback) => callback(error: Error | null, response: Response | null);
+exports.handler: (event: Event, context: Context, callback) => callback(error: Error | null, response: Response | null);
 ```
