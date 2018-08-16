@@ -14,7 +14,11 @@
   ],
   "scripts": {
     "lint": "eslint .",
-    "test": "jest --env node"
+    "test": "jest --env node",
+    "version": "standard-version",
+    "prerelease": "npm run lint && npm run test",
+    "release": "git push --follow-tags origin master",
+    "postrelease": "npm publish"
   },
   "engines": {
     "node": ">= 8.10"
@@ -43,6 +47,7 @@
     "jest": "^23.4.2",
     "prettier": "^1.14.0",
     "rimraf": "^2.6.2",
+    "standard-version": "^4.4.0",
     "supertest": "^3.1.0"
   },
   "keywords": [
