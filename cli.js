@@ -30,13 +30,19 @@ require('yargs')(process.argv.slice(2))
     desc: 'Bundle Lambda functions',
     builder: yargs =>
       yargs
-        .positional('entry', { describe: 'Entry file or directory of functions', type: 'string' })
-        .positional('target', { describe: 'Target directory for bundled functions', type: 'string' }),
+        .positional('entry', { describe: 'Relative path to entry file or directory of functions', type: 'string' })
+        .positional('target', { describe: 'Relative path to target directory for bundled functions', type: 'string' }),
     handler: build
   })
   .option('node', {
     alias: 'n',
     default: '8.10',
     description: 'Target Node.js version, used with @babel/preset-env',
+    type: 'string'
+  })
+  .option('webpack-config', {
+    alias: 'w',
+    description:
+      'Relative path to optional Webpack configuration. The default export should be an object that is merged with the default webpack config, or a function that receives the default configuration and returns a valid webpack configuration.',
     type: 'string'
   }).argv;

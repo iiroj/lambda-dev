@@ -7,14 +7,21 @@ cli.js build <entry> <target>
 Bundle Lambda functions
 
 Positionals:
-  entry   Entry file or directory of functions               [string] [required]
-  target  Target directory for bundled functions             [string] [required]
+  entry   Relative path to entry file or directory of functions
+                                                             [string] [required]
+  target  Relative path to target directory for bundled functions
+                                                             [string] [required]
 
 Options:
-  --help      Show help                                                [boolean]
-  --version   Show version number                                      [boolean]
-  --node, -n  Target Node.js version, used with @babel/preset-env
+  --help                Show help                                      [boolean]
+  --version             Show version number                            [boolean]
+  --node, -n            Target Node.js version, used with @babel/preset-env
                                                       [string] [default: "8.10"]
+  --webpack-config, -w  Relative path to optional Webpack configuration. The
+                        default export should be an object that is merged with
+                        the default webpack config, or a function that receives
+                        the default configuration and returns a valid webpack
+                        configuration.                                  [string]
 
 Not enough non-option arguments: got 0, need at least 2
 ]
@@ -27,14 +34,21 @@ cli.js build <entry> <target>
 Bundle Lambda functions
 
 Positionals:
-  entry   Entry file or directory of functions               [string] [required]
-  target  Target directory for bundled functions             [string] [required]
+  entry   Relative path to entry file or directory of functions
+                                                             [string] [required]
+  target  Relative path to target directory for bundled functions
+                                                             [string] [required]
 
 Options:
-  --help      Show help                                                [boolean]
-  --version   Show version number                                      [boolean]
-  --node, -n  Target Node.js version, used with @babel/preset-env
+  --help                Show help                                      [boolean]
+  --version             Show version number                            [boolean]
+  --node, -n            Target Node.js version, used with @babel/preset-env
                                                       [string] [default: "8.10"]
+  --webpack-config, -w  Relative path to optional Webpack configuration. The
+                        default export should be an object that is merged with
+                        the default webpack config, or a function that receives
+                        the default configuration and returns a valid webpack
+                        configuration.                                  [string]
 
 Not enough non-option arguments: got 1, need at least 2
 ]
@@ -50,13 +64,18 @@ Positionals:
   entry  Entry file or directory of Lambda functions                  [required]
 
 Options:
-  --help          Show help                                            [boolean]
-  --version       Show version number                                  [boolean]
-  --node, -n      Target Node.js version, used with @babel/preset-env
+  --help                Show help                                      [boolean]
+  --version             Show version number                            [boolean]
+  --node, -n            Target Node.js version, used with @babel/preset-env
                                                       [string] [default: "8.10"]
-  --basePath, -b  Base pathname prepended to function filenames
+  --webpack-config, -w  Relative path to optional Webpack configuration. The
+                        default export should be an object that is merged with
+                        the default webpack config, or a function that receives
+                        the default configuration and returns a valid webpack
+                        configuration.                                  [string]
+  --basePath, -b        Base pathname prepended to function filenames
                                                          [string] [default: "/"]
-  --port, -p      Port for development server           [number] [default: 9000]
+  --port, -p            Port for development server     [number] [default: 9000]
 
 Not enough non-option arguments: got 0, need at least 1
 ]
@@ -71,10 +90,15 @@ Commands:
   cli.js build <entry> <target>  Bundle Lambda functions
 
 Options:
-  --help      Show help                                                [boolean]
-  --version   Show version number                                      [boolean]
-  --node, -n  Target Node.js version, used with @babel/preset-env
+  --help                Show help                                      [boolean]
+  --version             Show version number                            [boolean]
+  --node, -n            Target Node.js version, used with @babel/preset-env
                                                       [string] [default: "8.10"]
+  --webpack-config, -w  Relative path to optional Webpack configuration. The
+                        default export should be an object that is merged with
+                        the default webpack config, or a function that receives
+                        the default configuration and returns a valid webpack
+                        configuration.                                  [string]
 
 Not enough non-option arguments: got 0, need at least 1
 ]
