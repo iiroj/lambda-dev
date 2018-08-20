@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.3.0"></a>
+# [1.3.0](https://gitlab.com/iiroj/lambda-dev/compare/v1.2.2...v1.3.0) (2018-08-20)
+
+
+### Features
+
+* Build and Serve with same webpack configuration ([366dde0](https://gitlab.com/iiroj/lambda-dev/commit/366dde0))
+
+
+
 <a name="1.2.2"></a>
 ## [1.2.2](https://gitlab.com/iiroj/lambda-dev/compare/v1.2.1...v1.2.2) (2018-08-20)
 
