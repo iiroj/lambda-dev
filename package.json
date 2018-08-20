@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "lint": "eslint .",
-    "test": "jest --forceExit",
+    "test": "jest",
     "version": "standard-version",
     "prerelease": "npm run lint && npm run test",
     "release": "git push --follow-tags origin master",

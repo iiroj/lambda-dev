@@ -3,12 +3,14 @@ const rimraf = require('rimraf');
 
 const build = require('../../lib/build');
 
+jest.spyOn(global.console, 'warn');
+
 describe('Custom Webpack Config', () => {
   beforeAll(() => {
     rimraf.sync('./test/tmp');
   });
 
-  it('Should merge configuration object', async () => {
+  test('Merging configuration object', async () => {
     await build({
       entry: 'test/webpack/object-handler.js',
       node: '6.10',
@@ -20,7 +22,7 @@ describe('Custom Webpack Config', () => {
     expect(handler).toMatchSnapshot('handler');
   });
 
-  it('Should use configuration returned by function', async () => {
+  test('Configuration function', async () => {
     await build({
       entry: 'test/webpack/function-handler.js',
       node: '6.10',
@@ -32,7 +34,40 @@ describe('Custom Webpack Config', () => {
     expect(handler).toMatchSnapshot('handler');
   });
 
-  // afterAll(() => {
-  //   rimraf.sync('./test/tmp');
-  // });
+  test('Invalid configuration', async () => {
+    await expect(
+      build({
+        entry: 'test/webpack/function-handler.js',
+        node: '6.10',
+        target: 'test/tmp',
+        webpackConfig: 'test/webpack/invalid-config.js'
+      })
+    ).rejects.toBeTruthy();
+  });
+
+  test('Invalid code in handler 1', async () => {
+    await expect(
+      build({
+        entry: 'test/webpack/invalid-handler1.js',
+        node: '6.10',
+        target: 'test/tmp'
+      })
+    ).rejects.toBeTruthy();
+  });
+
+  test('Invalid code in handler 2', async () => {
+    await expect(
+      build({
+        entry: 'test/webpack/invalid-handler2.js',
+        node: '6.10',
+        target: 'test/tmp'
+      })
+    ).resolves.toBeTruthy();
+
+    expect(console.warn).toHaveBeenCalled();
+  });
+
+  afterAll(() => {
+    rimraf.sync('./test/tmp');
+  });
 });

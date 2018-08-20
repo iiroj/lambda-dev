@@ -1,65 +1,65 @@
 const request = require('supertest');
 
-const serve = require('../lib/serve');
-
-const args = { basePath: '/', entry: 'test/fixtures', node: '6.10', port: '9000' };
-
 describe('serve', () => {
   let app;
 
-  beforeAll(async () => {
-    app = await serve(args);
+  beforeEach(async done => {
+    app = await require('../lib/serve').createServer({
+      basePath: '/',
+      entry: 'test/fixtures',
+      node: '6.10',
+      watch: false
+    });
+
+    done();
   });
 
-  test('GET /handler-error', () =>
-    request(app)
-      .get('/handler-error')
-      .then(response => {
-        expect(response.statusCode).toEqual(500);
-        expect(response.text).toEqual('');
-      }));
+  test('GET /handler-error', async () => {
+    const response = await request(app).get('/handler-error');
 
-  test('GET /hello-world', () =>
-    request(app)
-      .get('/hello-world')
-      .then(response => {
-        expect(response.statusCode).toEqual(200);
-        expect(response.text).toEqual('Hello, world!');
-      }));
+    expect(response.statusCode).toEqual(500);
+    expect(response.text).toEqual('');
+  });
 
-  test('GET /internal-error', () =>
-    request(app)
-      .get('/internal-error')
-      .then(response => {
-        expect(response.statusCode).toEqual(500);
-        expect(response.text).toEqual('Function invocation failed: Error');
-      }));
+  test('GET /headers', async () => {
+    const response = await request(app).get('/headers');
 
-  test('GET /post-only', () =>
-    request(app)
-      .get('/post-only')
-      .then(response => {
-        expect(response.statusCode).toEqual(405);
-        expect(response.text).toEqual('');
-      }));
+    expect(response.statusCode).toEqual(204);
+    expect(response.headers.foo).toEqual('bar');
+  });
 
-  test('POST /post-only', () =>
-    request(app)
-      .post('/post-only')
-      .then(response => {
-        expect(response.statusCode).toEqual(204);
-        expect(response.text).toEqual('');
-      }));
+  test('GET /hello-world', async () => {
+    const response = await request(app).get('/hello-world');
 
-  test('GET /require', () =>
-    request(app)
-      .post('/require')
-      .then(response => {
-        expect(response.statusCode).toEqual(200);
-        expect(response.text).toEqual('Hello, world!');
-      }));
+    expect(response.statusCode).toEqual(200);
+    expect(response.text).toEqual('Hello, world!');
+  });
 
-  afterAll(() => {
-    app.close();
+  test('GET /internal-error', async () => {
+    const response = await request(app).get('/internal-error');
+
+    expect(response.statusCode).toEqual(500);
+    expect(response.text).toEqual('Function invocation failed: Error');
+  });
+
+  test('GET /post-only', async () => {
+    const response = await request(app).get('/post-only');
+
+    expect(response.statusCode).toEqual(405);
+    expect(response.text).toEqual('');
+  });
+
+  test('POST /post-only', async () => {
+    const response = await request(app).post('/post-only');
+
+    expect(response.statusCode).toEqual(204);
+    expect(response.text).toEqual('');
+  });
+
+  test('GET /require/', async () => {
+    const response = await request(app).get('/require/');
+
+    expect(response.statusCode).toEqual(200);
+    expect(response.text).toEqual('Hello, world!');
   });
 });

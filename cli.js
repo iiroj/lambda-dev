@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const serve = require('./lib/serve');
+const { listen } = require('./lib/serve');
 const build = require('./lib/build');
 
 require('yargs')(process.argv.slice(2))
@@ -23,7 +23,7 @@ require('yargs')(process.argv.slice(2))
           description: 'Port for development server',
           type: 'number'
         }),
-    handler: serve
+    handler: listen
   })
   .command({
     command: 'build <entry> <target>',
