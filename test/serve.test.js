@@ -58,4 +58,8 @@ describe('serve', () => {
         expect(response.statusCode).toEqual(200);
         expect(response.text).toEqual('Hello, world!');
       }));
+
+  afterAll(() => {
+    app.close();
+  });
 });
