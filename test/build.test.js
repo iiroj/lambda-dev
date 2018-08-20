@@ -1,7 +1,7 @@
 const fs = require('fs');
 const rimraf = require('rimraf');
 
-const { build } = require('../lib/build');
+const build = require('../lib/build');
 const args = { entry: 'test/fixtures', node: '6.10', target: 'test/tmp' };
 
 describe('build', () => {
@@ -10,9 +10,7 @@ describe('build', () => {
   });
 
   it('Should build succesfully', async () => {
-    const status = await build(args);
-
-    expect(status).toMatchSnapshot('build');
+    await build(args);
 
     const handlerError = fs.readFileSync('./test/tmp/handler-error.js').toString('utf-8');
     expect(handlerError).toMatchSnapshot('handlerError');

@@ -39,7 +39,7 @@
 
 ### Development
 
-Use `lambda-dev` to develop lambda functions locally. `lambda-dev serve` starts an [Express](https://expressjs.com) server that proxies http requests to your lambda functions. They are transpiled with [@babel/core](https://babeljs.io/docs/en/next/babel-core) and [@babel/preset-env](https://babeljs.io/docs/en/next/babel-preset-env), with the node target set to `--node [target]` (default `6.10`). Transpilation happens on every request so functions are up-to-date on every invocation.
+Use `lambda-dev` to develop lambda functions locally. `lambda-dev serve` starts an [Express](https://expressjs.com) server that proxies http requests to your lambda functions. They are transpiled with [@babel/core](https://babeljs.io/docs/en/next/babel-core) and [@babel/preset-env](https://babeljs.io/docs/en/next/babel-preset-env), with the node target set to `--node [target]` (default `6.10`). This is done through [webpack](https://webpack.js.org) with the help of [babel-loader](https://github.com/babel/babel-loader).
 
 ```bash
 lambda-dev serve --help
@@ -50,14 +50,47 @@ Now a given function `src/functions/test.js` will be invoked with requests to `h
 
 ### Build
 
-Use `lambda-dev build` to bundle your lambda function through [webpack](https://webpack.js.org).
-
 ```bash
 lambda-dev build --help
 lambda-dev serve src/functions build/functions --node 8.10
 ```
 
-Now bundled functions will be at `build/functions`.
+Bundled functions will be at `build/functions`.
+
+## Custom Webpack configuration
+
+It is possible to supply a custom Webpack configuration for serving and building your Lambda functions:
+
+```bash
+lambda-dev serve src/functions --webpack-config ./my-webpack.config.js
+```
+
+where the default export of `my-webpack.config.js` should be either and object or a function. If it's an object, it will be merged with the default configuration using `merge.smart` from [webpack-merge](https://github.com/survivejs/webpack-merge). If it's a function, it will receive the default configuration as its argument and should return a full valid configuration.
+
+## Custom babel configuration
+
+It's not possible to directly supply a custom babel configuration, but you can override the webpack configuration's [babel-loader](https://github.com/babel/babel-loader) options:
+
+```javascript
+const myBabelOptions = require('./my-babel.config.js);
+
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: {
+          loader: require.resolve('babel-loader'),
+          options: {
+            babelrc: false,
+            options: myBabelOptions
+          }
+        }
+      }
+    ]
+  }
+};
+```
 
 ## Lambda Function Specification
 

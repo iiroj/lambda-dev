@@ -1,11 +1,16 @@
 const request = require('supertest');
 
-const { createDevServer } = require('../lib/serve');
+const serve = require('../lib/serve');
+
 const args = { basePath: '/', entry: 'test/fixtures', node: '6.10', port: '9000' };
 
-const app = createDevServer(args);
-
 describe('serve', () => {
+  let app;
+
+  beforeAll(async () => {
+    app = await serve(args);
+  });
+
   test('GET /handler-error', () =>
     request(app)
       .get('/handler-error')

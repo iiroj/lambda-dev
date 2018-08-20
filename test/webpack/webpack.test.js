@@ -1,7 +1,7 @@
 const fs = require('fs');
 const rimraf = require('rimraf');
 
-const { build } = require('../../lib/build');
+const build = require('../../lib/build');
 
 describe('Custom Webpack Config', () => {
   beforeAll(() => {

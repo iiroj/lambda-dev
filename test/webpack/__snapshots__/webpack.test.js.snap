@@ -1,17 +1,135 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Custom Webpack Config Should merge configuration object: build 1`] = `
-Array [
-  "[λ-dev] Built: /object-handler.js",
-]
+Object {
+  "entries": Array [
+    Object {
+      "file": "/Users/iiro/git/lambda-dev/test/webpack/object-handler.js",
+      "requestPath": "/object-handler",
+      "target": "/object-handler.js",
+    },
+  ],
+  "hash": "ab1f35eee1a043b21f59",
+  "modules": Array [
+    Object {
+      "assets": Array [],
+      "built": true,
+      "cacheable": true,
+      "chunks": Array [
+        0,
+      ],
+      "depth": 0,
+      "errors": 0,
+      "failed": false,
+      "id": 0,
+      "identifier": "/Users/iiro/git/lambda-dev/node_modules/babel-loader/lib/index.js??ref--4!/Users/iiro/git/lambda-dev/test/webpack/object-handler.js",
+      "index": 0,
+      "index2": 0,
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "name": "./test/webpack/object-handler.js",
+      "optimizationBailout": Array [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module",
+      ],
+      "optional": false,
+      "prefetched": false,
+      "profile": undefined,
+      "providedExports": null,
+      "reasons": Array [
+        Object {
+          "explanation": undefined,
+          "loc": "object-handler",
+          "module": null,
+          "moduleId": null,
+          "moduleIdentifier": null,
+          "moduleName": null,
+          "type": "single entry",
+          "userRequest": "/Users/iiro/git/lambda-dev/test/webpack/object-handler.js",
+        },
+      ],
+      "size": 146,
+      "source": "\\"use strict\\";
+
+exports.handler = (event, context, callback) => {
+  return callback(null, {
+    statusCode: 200,
+    body: process.env.FOO
+  });
+};",
+      "usedExports": true,
+      "warnings": 0,
+    },
+  ],
+}
 `;
 
 exports[`Custom Webpack Config Should merge configuration object: handler 1`] = `"!function(e,t){for(var r in t)e[r]=t[r]}(exports,function(e){var t={};function r(n){if(t[n])return t[n].exports;var o=t[n]={i:n,l:!1,exports:{}};return e[n].call(o.exports,o,o.exports,r),o.l=!0,o.exports}return r.m=e,r.c=t,r.d=function(e,t,n){r.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},r.r=function(e){\\"undefined\\"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:\\"Module\\"}),Object.defineProperty(e,\\"__esModule\\",{value:!0})},r.t=function(e,t){if(1&t&&(e=r(e)),8&t)return e;if(4&t&&\\"object\\"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(r.r(n),Object.defineProperty(n,\\"default\\",{enumerable:!0,value:e}),2&t&&\\"string\\"!=typeof e)for(var o in e)r.d(n,o,function(t){return e[t]}.bind(null,o));return n},r.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return r.d(t,\\"a\\",t),t},r.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},r.p=\\"\\",r(r.s=0)}([function(e,t,r){\\"use strict\\";t.handler=((e,t,r)=>r(null,{statusCode:200,body:BAR}))}]));"`;
 
 exports[`Custom Webpack Config Should use configuration returned by function: build 1`] = `
-Array [
-  "[λ-dev] Built: /function-handler.js",
-]
+Object {
+  "entries": Array [
+    Object {
+      "file": "/Users/iiro/git/lambda-dev/test/webpack/function-handler.js",
+      "requestPath": "/function-handler",
+      "target": "/function-handler.js",
+    },
+  ],
+  "hash": "efbf82854c10904ee617",
+  "modules": Array [
+    Object {
+      "assets": Array [],
+      "built": true,
+      "cacheable": true,
+      "chunks": Array [
+        0,
+      ],
+      "depth": 0,
+      "errors": 0,
+      "failed": false,
+      "id": 0,
+      "identifier": "/Users/iiro/git/lambda-dev/node_modules/babel-loader/lib/index.js??ref--4!/Users/iiro/git/lambda-dev/test/webpack/function-handler.js",
+      "index": 0,
+      "index2": 0,
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "name": "./test/webpack/function-handler.js",
+      "optimizationBailout": Array [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module",
+      ],
+      "optional": false,
+      "prefetched": false,
+      "profile": undefined,
+      "providedExports": null,
+      "reasons": Array [
+        Object {
+          "explanation": undefined,
+          "loc": "function-handler",
+          "module": null,
+          "moduleId": null,
+          "moduleIdentifier": null,
+          "moduleName": null,
+          "type": "single entry",
+          "userRequest": "/Users/iiro/git/lambda-dev/test/webpack/function-handler.js",
+        },
+      ],
+      "size": 151,
+      "source": "\\"use strict\\";
+
+exports.handler = (event, context, callback) => {
+  return callback(null, {
+    statusCode: 200,
+    body: process.env.NODE_ENV
+  });
+};",
+      "usedExports": true,
+      "warnings": 0,
+    },
+  ],
+}
 `;
 
 exports[`Custom Webpack Config Should use configuration returned by function: handler 1`] = `"!function(e,t){for(var r in t)e[r]=t[r]}(exports,function(e){var t={};function r(n){if(t[n])return t[n].exports;var o=t[n]={i:n,l:!1,exports:{}};return e[n].call(o.exports,o,o.exports,r),o.l=!0,o.exports}return r.m=e,r.c=t,r.d=function(e,t,n){r.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},r.r=function(e){\\"undefined\\"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:\\"Module\\"}),Object.defineProperty(e,\\"__esModule\\",{value:!0})},r.t=function(e,t){if(1&t&&(e=r(e)),8&t)return e;if(4&t&&\\"object\\"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(r.r(n),Object.defineProperty(n,\\"default\\",{enumerable:!0,value:e}),2&t&&\\"string\\"!=typeof e)for(var o in e)r.d(n,o,function(t){return e[t]}.bind(null,o));return n},r.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return r.d(t,\\"a\\",t),t},r.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},r.p=\\"\\",r(r.s=0)}([function(e,t,r){\\"use strict\\";t.handler=((e,t,r)=>r(null,{statusCode:200,body:OVERWRITTEN}))}]));"`;
