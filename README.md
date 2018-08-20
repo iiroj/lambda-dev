@@ -8,19 +8,22 @@
   <br/>
   <br/>
   <a href="https://www.npmjs.com/package/lambda-dev">
-    <img src="https://img.shields.io/npm/v/lambda-dev.svg?style=flat-square">
+    <img src="https://img.shields.io/npm/v/lambda-dev.svg">
   </a>
   <a href="https://gitlab.com/iiroj/lambda-dev">
-    <img src="https://img.shields.io/github/languages/code-size/iiroj/lambda-dev.svg?style=flat-square">
+    <img src="https://img.shields.io/github/languages/code-size/iiroj/lambda-dev.svg">
   </a>
-  <a href="https://gitlab.com/iiroj/app-bar/pipelines/">
-    <img src="https://img.shields.io/badge/GitLab-Pipeline-lightgrey.svg?style=flat-square">
+  <a href="https://gitlab.com/iiroj/lambda-dev/commits/master">
+    <img alt="pipeline status" src="https://gitlab.com/iiroj/lambda-dev/badges/master/pipeline.svg" />
+  </a>
+  <a href="https://gitlab.com/iiroj/lambda-dev/commits/master">
+    <img alt="coverage report" src="https://gitlab.com/iiroj/lambda-dev/badges/master/coverage.svg" />
   </a>
   <a href="https://gitlab.com/iiroj/lambda-dev/blob/master/package.json">
-    <img src="https://img.shields.io/david/iiroj/lambda-dev.svg?style=flat-square">
+    <img src="https://img.shields.io/david/iiroj/lambda-dev.svg">
   </a>
   <a href="https://gitlab.com/iiroj/lambda-dev/blob/master/package.json">
-    <img src="https://img.shields.io/david/dev/iiroj/lambda-dev.svg?style=flat-square">
+    <img src="https://img.shields.io/david/dev/iiroj/lambda-dev.svg">
   </a>
   <br/>
   <br/>
