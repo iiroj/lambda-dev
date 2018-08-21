@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.4.0"></a>
+# [1.4.0](https://gitlab.com/iiroj/lambda-dev/compare/v1.3.4...v1.4.0) (2018-08-21)
+
+
+### Features
+
+* add --watch flag ([0efea2d](https://gitlab.com/iiroj/lambda-dev/commit/0efea2d))
+
+
+
 <a name="1.3.4"></a>
 ## [1.3.4](https://gitlab.com/iiroj/lambda-dev/compare/v1.3.3...v1.3.4) (2018-08-20)
 
