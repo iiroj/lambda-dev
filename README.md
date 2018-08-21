@@ -72,7 +72,7 @@ where the default export of `my-webpack.config.js` should be either and object o
 It's not possible to directly supply a custom babel configuration, but you can override the webpack configuration's [babel-loader](https://github.com/babel/babel-loader) options:
 
 ```javascript
-const myBabelOptions = require('./my-babel.config.js);
+const myBabelOptions = require('./my-babel.config.js');
 
 module.exports = {
   module: {
