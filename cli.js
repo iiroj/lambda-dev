@@ -45,4 +45,8 @@ require('yargs')(process.argv.slice(2))
     description:
       'Relative path to optional Webpack configuration. The default export should be an object that is merged with the default webpack config, or a function that receives the default configuration and returns a valid webpack configuration.',
     type: 'string'
+  })
+  .option('watch', {
+    description: 'Control the webpack watch mode. Defaults to true for serve and false for build.',
+    type: 'boolean'
   }).argv;

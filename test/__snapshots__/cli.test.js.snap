@@ -22,6 +22,8 @@ Options:
                         the default webpack config, or a function that receives
                         the default configuration and returns a valid webpack
                         configuration.                                  [string]
+  --watch               Control the webpack watch mode. Defaults to true for
+                        serve and false for build.                     [boolean]
 
 Not enough non-option arguments: got 0, need at least 2
 ]
@@ -49,6 +51,8 @@ Options:
                         the default webpack config, or a function that receives
                         the default configuration and returns a valid webpack
                         configuration.                                  [string]
+  --watch               Control the webpack watch mode. Defaults to true for
+                        serve and false for build.                     [boolean]
 
 Not enough non-option arguments: got 1, need at least 2
 ]
@@ -73,6 +77,8 @@ Options:
                         the default webpack config, or a function that receives
                         the default configuration and returns a valid webpack
                         configuration.                                  [string]
+  --watch               Control the webpack watch mode. Defaults to true for
+                        serve and false for build.                     [boolean]
   --basePath, -b        Base pathname prepended to function filenames
                                                          [string] [default: "/"]
   --port, -p            Port for development server     [number] [default: 9000]
@@ -99,6 +105,8 @@ Options:
                         the default webpack config, or a function that receives
                         the default configuration and returns a valid webpack
                         configuration.                                  [string]
+  --watch               Control the webpack watch mode. Defaults to true for
+                        serve and false for build.                     [boolean]
 
 Not enough non-option arguments: got 0, need at least 1
 ]
