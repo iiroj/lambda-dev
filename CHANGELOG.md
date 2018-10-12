@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.4.7"></a>
+## [1.4.7](https://gitlab.com/iiroj/lambda-dev/compare/v1.4.6...v1.4.7) (2018-10-12)
+
+
+
 <a name="1.4.6"></a>
 ## [1.4.6](https://gitlab.com/iiroj/lambda-dev/compare/v1.4.5...v1.4.6) (2018-09-22)
 
