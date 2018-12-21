@@ -1,3 +1,3 @@
 module.exports = () => ({
-  mode: 'test'
+  mode: "test"
 });

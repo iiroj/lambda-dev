@@ -1,36 +1,38 @@
-const CliTest = require('command-line-test');
+const CliTest = require("command-line-test");
 
-describe('cli', () => {
-  test('Without arguments', async () => {
+describe("cli", () => {
+  test("Without arguments", async () => {
     const cli = new CliTest();
-    const { error, stdout, stderr } = await cli.exec('node cli.js');
+    const { error, stdout, stderr } = await cli.exec("node cli.js");
 
     expect(error).toMatchSnapshot();
     expect(stdout).toEqual(null);
     expect(stderr).toEqual(null);
   });
 
-  test('Build without entry argument', async () => {
+  test("Build without entry argument", async () => {
     const cli = new CliTest();
-    const { error, stdout, stderr } = await cli.exec('node cli.js build');
+    const { error, stdout, stderr } = await cli.exec("node cli.js build");
 
     expect(error).toMatchSnapshot();
     expect(stdout).toEqual(null);
     expect(stderr).toEqual(null);
   });
 
-  test('Build without target argument', async () => {
+  test("Build without target argument", async () => {
     const cli = new CliTest();
-    const { error, stdout, stderr } = await cli.exec('node cli.js build test/fixtures');
+    const { error, stdout, stderr } = await cli.exec(
+      "node cli.js build test/fixtures"
+    );
 
     expect(error).toMatchSnapshot();
     expect(stdout).toEqual(null);
     expect(stderr).toEqual(null);
   });
 
-  test('Serve without entry argument', async () => {
+  test("Serve without entry argument", async () => {
     const cli = new CliTest();
-    const { error, stdout, stderr } = await cli.exec('node cli.js serve');
+    const { error, stdout, stderr } = await cli.exec("node cli.js serve");
 
     expect(error).toMatchSnapshot();
     expect(stdout).toEqual(null);

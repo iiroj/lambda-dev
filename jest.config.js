@@ -1,7 +1,7 @@
 module.exports = {
-  collectCoverageFrom: ['lib/**/*.{js}'],
+  collectCoverageFrom: ["lib/**/*.{js}"],
   collectCoverage: true,
-  coverageReporters: process.env.CI ? ['text-summary'] : ['lcov'],
+  coverageReporters: process.env.CI ? ["text-summary"] : ["lcov"],
   coverageThreshold: {
     global: {
       statements: 1,
@@ -10,6 +10,6 @@ module.exports = {
       lines: 1
     }
   },
-  testEnvironment: 'node',
-  testRegex: 'test/.*\\.test\\.js$'
+  testEnvironment: "node",
+  testRegex: "test/.*\\.test\\.js$"
 };

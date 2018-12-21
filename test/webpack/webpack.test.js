@@ -1,66 +1,70 @@
-const fs = require('fs');
-const rimraf = require('rimraf');
+const fs = require("fs");
+const rimraf = require("rimraf");
 
-const build = require('../../lib/build');
+const build = require("../../lib/build");
 
-jest.spyOn(global.console, 'warn');
+jest.spyOn(global.console, "warn");
 
-describe('Custom Webpack Config', () => {
+describe("Custom Webpack Config", () => {
   beforeAll(() => {
-    rimraf.sync('./test/tmp');
+    rimraf.sync("./test/tmp");
   });
 
-  test('Merging configuration object', async () => {
+  test("Merging configuration object", async () => {
     await build({
-      entry: 'test/webpack/object-handler.js',
-      node: '6.10',
-      target: 'test/tmp',
-      webpackConfig: 'test/webpack/object-config.js'
+      entry: "test/webpack/object-handler.js",
+      node: "6.10",
+      target: "test/tmp",
+      webpackConfig: "test/webpack/object-config.js"
     });
 
-    const handler = fs.readFileSync('./test/tmp/object-handler.js').toString('utf-8');
-    expect(handler).toMatchSnapshot('handler');
+    const handler = fs
+      .readFileSync("./test/tmp/object-handler.js")
+      .toString("utf-8");
+    expect(handler).toMatchSnapshot("handler");
   });
 
-  test('Configuration function', async () => {
+  test("Configuration function", async () => {
     await build({
-      entry: 'test/webpack/function-handler.js',
-      node: '6.10',
-      target: 'test/tmp',
-      webpackConfig: 'test/webpack/function-config.js'
+      entry: "test/webpack/function-handler.js",
+      node: "6.10",
+      target: "test/tmp",
+      webpackConfig: "test/webpack/function-config.js"
     });
 
-    const handler = fs.readFileSync('./test/tmp/function-handler.js').toString('utf-8');
-    expect(handler).toMatchSnapshot('handler');
+    const handler = fs
+      .readFileSync("./test/tmp/function-handler.js")
+      .toString("utf-8");
+    expect(handler).toMatchSnapshot("handler");
   });
 
-  test('Invalid configuration', async () => {
+  test("Invalid configuration", async () => {
     await expect(
       build({
-        entry: 'test/webpack/function-handler.js',
-        node: '6.10',
-        target: 'test/tmp',
-        webpackConfig: 'test/webpack/invalid-config.js'
+        entry: "test/webpack/function-handler.js",
+        node: "6.10",
+        target: "test/tmp",
+        webpackConfig: "test/webpack/invalid-config.js"
       })
     ).rejects.toBeTruthy();
   });
 
-  test('Invalid code in handler 1', async () => {
+  test("Invalid code in handler 1", async () => {
     await expect(
       build({
-        entry: 'test/webpack/invalid-handler1.js',
-        node: '6.10',
-        target: 'test/tmp'
+        entry: "test/webpack/invalid-handler1.js",
+        node: "6.10",
+        target: "test/tmp"
       })
     ).rejects.toBeTruthy();
   });
 
-  test('Invalid code in handler 2', async () => {
+  test("Invalid code in handler 2", async () => {
     await expect(
       build({
-        entry: 'test/webpack/invalid-handler2.js',
-        node: '6.10',
-        target: 'test/tmp'
+        entry: "test/webpack/invalid-handler2.js",
+        node: "6.10",
+        target: "test/tmp"
       })
     ).resolves.toBeTruthy();
 
@@ -68,6 +72,6 @@ describe('Custom Webpack Config', () => {
   });
 
   afterAll(() => {
-    rimraf.sync('./test/tmp');
+    rimraf.sync("./test/tmp");
   });
 });

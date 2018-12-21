@@ -1,3 +1,3 @@
-const { handler } = require('../hello-world');
+const { handler } = require("../hello-world");
 
 exports.handler = handler;
