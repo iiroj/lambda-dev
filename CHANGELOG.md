@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.5.1"></a>
+## [1.5.1](https://gitlab.com/iiroj/lambda-dev/compare/v1.5.0...v1.5.1) (2018-12-21)
+
+
+### Bug Fixes
+
+* handle cache busting for index routes ([4d1f216](https://gitlab.com/iiroj/lambda-dev/commit/4d1f216))
+* log served function names only once ([dc2b424](https://gitlab.com/iiroj/lambda-dev/commit/dc2b424))
+
+
+
 <a name="1.5.0"></a>
 # [1.5.0](https://gitlab.com/iiroj/lambda-dev/compare/v1.4.10...v1.5.0) (2018-12-21)
 
