@@ -42,6 +42,16 @@ require("yargs")(process.argv.slice(2))
         }),
     handler: build
   })
+  .option("include", {
+    alias: "i",
+    describe: "Glob for including Lambda Functions from the entry set",
+    type: "string"
+  })
+  .option("exclude", {
+    alias: "e",
+    describe: "Glob for excluding Lambda Functions from included set",
+    type: "string"
+  })
   .option("node", {
     alias: "n",
     default: "8.10",
