@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.5.0"></a>
+# [1.5.0](https://gitlab.com/iiroj/lambda-dev/compare/v1.4.10...v1.5.0) (2018-12-21)
+
+
+### Features
+
+* add --include and --exclude options for globbing functions ([fc710d2](https://gitlab.com/iiroj/lambda-dev/commit/fc710d2))
+
+
+
 <a name="1.4.10"></a>
 ## [1.4.10](https://gitlab.com/iiroj/lambda-dev/compare/v1.4.9...v1.4.10) (2018-11-30)
 
