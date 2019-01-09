@@ -4,9 +4,9 @@
   "description": "Develop and Bundle Your Lambda Functions With Ease",
   "author": "Iiro Jäppinen <iiro@jappinen.fi> (https://iiro.fi)",
   "license": "MIT",
-  "homepage": "https://gitlab.com/iiroj/lambda-dev",
-  "repository": "gitlab:iiroj/lambda-dev",
-  "bugs": "https://gitlab.com/iiroj/lambda-dev/issues",
+  "homepage": "https://github.com/iiroj/lambda-dev",
+  "repository": "github:iiroj/lambda-dev",
+  "bugs": "https://github.com/iiroj/lambda-dev/issues",
   "bin": "cli.js",
   "files": [
     "cli.js",

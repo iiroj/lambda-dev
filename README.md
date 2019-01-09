@@ -4,13 +4,14 @@
   <br/>
   <p>Develop and Bundle Your Lambda Functions With Ease</p>
   <a href="https://www.npmjs.com/package/lambda-dev"><strong>npm</strong></a> ·
+  <a href="https://github.com/iiroj/lambda-dev"><strong>GitHub</strong></a> ·
   <a href="https://gitlab.com/iiroj/lambda-dev"><strong>GitLab</strong></a>
   <br/>
   <br/>
   <a href="https://www.npmjs.com/package/lambda-dev">
     <img src="https://img.shields.io/npm/v/lambda-dev.svg">
   </a>
-  <a href="https://gitlab.com/iiroj/lambda-dev">
+  <a href="https://github.com/iiroj/lambda-dev">
     <img src="https://img.shields.io/github/languages/code-size/iiroj/lambda-dev.svg">
   </a>
   <a href="https://gitlab.com/iiroj/lambda-dev/commits/master">
@@ -19,10 +20,10 @@
   <a href="https://gitlab.com/iiroj/lambda-dev/commits/master">
     <img alt="coverage report" src="https://gitlab.com/iiroj/lambda-dev/badges/master/coverage.svg" />
   </a>
-  <a href="https://gitlab.com/iiroj/lambda-dev/blob/master/package.json">
+  <a href="https://github.com/iiroj/lambda-dev/blob/master/package.json">
     <img src="https://img.shields.io/david/iiroj/lambda-dev.svg">
   </a>
-  <a href="https://gitlab.com/iiroj/lambda-dev/blob/master/package.json">
+  <a href="https://github.com/iiroj/lambda-dev/blob/master/package.json">
     <img src="https://img.shields.io/david/dev/iiroj/lambda-dev.svg">
   </a>
   <br/>
