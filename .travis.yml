@@ -12,4 +12,4 @@ before_script:
 
 script:
   - npm run lint
-  - npm run tes
+  - npm run test
