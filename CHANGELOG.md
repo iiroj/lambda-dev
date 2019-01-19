@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.5.10"></a>
+## [1.5.10](https://github.com/iiroj/lambda-dev/compare/v1.5.9...v1.5.10) (2019-01-19)
+
+
+### Bug Fixes
+
+* serve correct handler for route by requestPath ([f8b5eb0](https://github.com/iiroj/lambda-dev/commit/f8b5eb0))
+
+
+
 <a name="1.5.9"></a>
 ## [1.5.9](https://github.com/iiroj/lambda-dev/compare/v1.5.8...v1.5.9) (2019-01-14)
 
