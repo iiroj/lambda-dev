@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/iiroj/lambda-dev/compare/v1.5.10...v1.6.0) (2019-01-23)
+
+
+### Features
+
+* Support isBase64Encoded ([b51f0ce](https://github.com/iiroj/lambda-dev/commit/b51f0ce))
+
+
+
 <a name="1.5.10"></a>
 ## [1.5.10](https://github.com/iiroj/lambda-dev/compare/v1.5.9...v1.5.10) (2019-01-19)
 
