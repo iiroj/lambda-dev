@@ -35,6 +35,13 @@ describe("serve", () => {
     expect(response.text).toEqual("Hello, world!");
   });
 
+  test("GET /base64", async () => {
+    const response = await request(app).get("/base64");
+
+    expect(response.statusCode).toEqual(200);
+    expect(response.body.toString()).toEqual("Hello, base64!");
+  });
+
   test("GET /internal-error", async () => {
     const response = await request(app).get("/internal-error");
 
