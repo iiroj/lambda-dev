@@ -8,6 +8,9 @@
   "repository": "github:iiroj/lambda-dev",
   "bugs": "https://github.com/iiroj/lambda-dev/issues",
   "bin": "cli.js",
+  "files": [
+    "cli.js"
+  ],
   "scripts": {
     "watch": "rollup -cw",
     "lint": "tslint -p tsconfig.json",
