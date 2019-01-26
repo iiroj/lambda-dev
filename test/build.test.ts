@@ -1,7 +1,8 @@
-const fs = require("fs");
-const rimraf = require("rimraf");
+import * as fs from "fs";
+import * as rimraf from "rimraf";
 
-const build = require("../lib/build");
+import build from "../src/build";
+
 const args = { entry: "test/fixtures", node: "6.10", target: "test/tmp" };
 
 test("build", async () => {

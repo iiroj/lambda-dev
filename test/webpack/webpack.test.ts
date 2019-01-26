@@ -1,7 +1,7 @@
-const fs = require("fs");
-const rimraf = require("rimraf");
+import * as fs from "fs";
+import * as rimraf from "rimraf";
 
-const build = require("../../lib/build");
+import build from "../../src/build";
 
 jest.spyOn(global.console, "warn");
 
