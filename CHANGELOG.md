@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.7.0"></a>
+# [1.7.0](https://github.com/iiroj/lambda-dev/compare/v1.6.0...v1.7.0) (2019-01-26)
+
+
+### Features
+
+* rewrite in TypeScript and bundle using Rollup ([9cfd2e1](https://github.com/iiroj/lambda-dev/commit/9cfd2e1))
+
+
+
 <a name="1.6.0"></a>
 # [1.6.0](https://github.com/iiroj/lambda-dev/compare/v1.5.10...v1.6.0) (2019-01-23)
 
