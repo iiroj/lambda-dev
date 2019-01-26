@@ -11,9 +11,6 @@
   <a href="https://www.npmjs.com/package/lambda-dev">
     <img src="https://img.shields.io/npm/v/lambda-dev.svg">
   </a>
-  <a href="https://travis-ci.com/iiroj/lambda-dev">
-    <img src="https://travis-ci.com/iiroj/lambda-dev.svg?branch=master" />
-  </a>
   <a href="https://github.com/iiroj/lambda-dev">
     <img src="https://img.shields.io/github/languages/code-size/iiroj/lambda-dev.svg">
   </a>
