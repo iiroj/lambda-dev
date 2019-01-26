@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "lib": ["es6"],
+    "noResolve": false,
+    "noUnusedParameters": true,
+    "pretty": true,
+    "strict": true,
+    "target": "es5"
+  },
+  "include": ["src", "types"]
+}

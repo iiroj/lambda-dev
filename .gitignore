@@ -1,3 +1,6 @@
+.rpt2_cache
 coverage
 test/tmp
 node_modules
+
+cli.js

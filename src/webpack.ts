@@ -1,25 +1,38 @@
-const { resolve } = require("path");
-const webpack = require("webpack");
-const merge = require("webpack-merge");
+import { resolve } from "path";
+import * as webpack from "webpack";
+import * as merge from "webpack-merge";
+
+import { Entry } from "./entries";
 
 const CWD = process.cwd();
 
-module.exports = ({
+type GetWebpackConfig = {
+  customConfig?: string;
+  dev?: boolean;
+  entries: Entry[];
+  nodeVersion: string;
+  targetDir?: string;
+};
+
+export default function getWebpackConfig({
   customConfig,
   dev = false,
   entries,
   nodeVersion,
-  targetDir
-}) => {
-  const path = targetDir ? resolve(CWD, targetDir) : undefined;
+  targetDir = "."
+}: GetWebpackConfig) {
+  const path = resolve(CWD, targetDir);
 
-  const entry = entries.reduce((accumulator, entry) => {
-    const key = entry.requestPath.replace(/^\//, "");
-    accumulator[key] = entry.file;
-    return accumulator;
-  }, {});
+  const entry = entries.reduce(
+    (accumulator, entry) => {
+      const key = entry.requestPath.replace(/^\//, "");
+      accumulator[key] = entry.file;
+      return accumulator;
+    },
+    {} as { [key: string]: string }
+  );
 
-  const defaultConfig = {
+  const defaultConfig: webpack.Configuration = {
     mode: dev ? "development" : "production",
     watch: dev,
     entry,
@@ -53,7 +66,7 @@ module.exports = ({
 
   const config = require(resolve(CWD, customConfig));
 
-  let mergedConfig;
+  let mergedConfig: webpack.Configuration;
 
   if (typeof config === "function") {
     mergedConfig = config(defaultConfig);
@@ -62,4 +75,4 @@ module.exports = ({
   }
 
   return mergedConfig;
-};
+}
