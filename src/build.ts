@@ -4,6 +4,7 @@ import chalk from "chalk";
 import getBuildCallback, { BuildCallback, ResolveArgs } from "./buildCallback";
 import getEntries from "./entries";
 import getWebpackConfig from "./webpack";
+import purgeRequireCache from "./purgeRequireCache";
 
 // bad typings
 const MemoryFS = require("memory-fs");
@@ -43,6 +44,7 @@ export default function build({
       if (dev) {
         const memoryFs = new MemoryFS();
         compiler.outputFileSystem = memoryFs;
+        compiler.hooks.watchRun.tapAsync("lambda-dev", purgeRequireCache);
       }
 
       watch
