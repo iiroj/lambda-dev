@@ -19,8 +19,7 @@
     "build": "rollup -c",
     "preversion": "npm run lint && npm test && npm run build",
     "version": "standard-version",
-    "push": "git push --follow-tags origin master",
-    "prepublishOnly": "npm run version && npm run push"
+    "push": "git push --follow-tags origin master"
   },
   "engines": {
     "node": ">= 8.10"
