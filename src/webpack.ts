@@ -25,8 +25,7 @@ export default function getWebpackConfig({
 
   const entry = entries.reduce(
     (accumulator, entry) => {
-      const key = entry.requestPath.replace(/^\//, "") || "index";
-      accumulator[key] = entry.file;
+      accumulator[entry.entry] = entry.file;
       return accumulator;
     },
     {} as { [key: string]: string }

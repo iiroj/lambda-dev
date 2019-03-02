@@ -19,6 +19,7 @@ export const getGlobAndCwd = (entry: string) => {
 
 export type Entry = {
   file: string;
+  entry: string;
   target: string;
   requestPath: string;
 };
@@ -41,12 +42,13 @@ export default function getEntries(
 
     return files.map(file => {
       const parsed = path.parse(file);
+      const basePath = parsed.dir.replace(cwd, "");
 
       return {
         file,
-        target: parsed.dir.replace(cwd, "") + "/" + parsed.base,
-        requestPath:
-          parsed.dir.replace(cwd, "") + "/" + parsed.name.replace(/^index$/, "")
+        entry: (basePath ? basePath + "/" : "") + parsed.name,
+        target: basePath + "/" + parsed.base,
+        requestPath: basePath + "/" + parsed.name.replace(/^index$/, "")
       };
     });
   } catch (err) {
