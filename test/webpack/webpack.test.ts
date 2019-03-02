@@ -1,15 +1,10 @@
 import * as fs from "fs";
-import * as rimraf from "rimraf";
 
 import build from "../../src/build";
 
 jest.spyOn(global.console, "warn");
 
 describe("Custom Webpack Config", () => {
-  beforeAll(() => {
-    rimraf.sync("./test/tmp");
-  });
-
   test("Merging configuration object", async () => {
     await build({
       entry: "test/webpack/object-handler.js",
@@ -69,9 +64,5 @@ describe("Custom Webpack Config", () => {
     ).resolves.toBeTruthy();
 
     expect(console.warn).toHaveBeenCalled();
-  });
-
-  afterAll(() => {
-    rimraf.sync("./test/tmp");
   });
 });
