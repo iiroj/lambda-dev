@@ -11,25 +11,19 @@ jobs:
     executor: worker
     steps:
       - checkout
-      - restore_cache:
-          keys:
-          - node_modules-{{ checksum "package.json" }}
-          - node_modules-
       - run:
           name: install
-          command: npm install
-      - save_cache:
-          paths:
-            - node_modules
-          key: node_modules-{{ checksum "package.json" }}
+          command: npm ci
+      - persist_to_workspace:
+          root: ~/ci
+          paths: node_modules
 
   test:
     executor: worker
     steps:
       - checkout
-      - restore_cache:
-          keys:
-          - node_modules-{{ checksum "package.json" }}
+      - attach_workspace:
+          at: ~/ci
       - run:
           name: lint
           command: npm run lint
@@ -44,9 +38,8 @@ jobs:
     executor: worker
     steps:
       - checkout
-      - restore_cache:
-          keys:
-          - node_modules-{{ checksum "package.json" }}
+      - attach_workspace:
+          at: ~/ci
       - run:
           name: build
           command: npm run build
