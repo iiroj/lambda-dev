@@ -1,6 +1,6 @@
 {
   "name": "lambda-dev",
-  "version": "1.8.8",
+  "version": "1.8.9",
   "description": "Develop and Bundle Your Lambda Functions With Ease",
   "author": "Iiro Jäppinen <iiro@jappinen.fi> (https://iiro.fi)",
   "license": "MIT",
