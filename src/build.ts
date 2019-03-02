@@ -47,12 +47,14 @@ export default function build({
         compiler.hooks.watchRun.tapAsync("lambda-dev", purgeRequireCache);
       }
 
-      watch
-        ? compiler.watch(
-            {},
-            getBuildCallback(entries, resolve, reject, callback)
-          )
-        : compiler.run(getBuildCallback(entries, resolve, reject, callback));
+      const buildCallback = getBuildCallback(
+        entries,
+        resolve,
+        reject,
+        callback
+      );
+
+      watch ? compiler.watch({}, buildCallback) : compiler.run(buildCallback);
     } catch (err) {
       console.error(`${chalk.grey("λ-dev")} ${chalk.red("Build error:")}`, err);
       reject({ entries, error: err });
