@@ -16,7 +16,8 @@ describe("Custom Webpack Config", () => {
     const handler = fs
       .readFileSync("./test/tmp/object-handler.js")
       .toString("utf-8");
-    expect(handler).toMatchSnapshot("handler");
+
+    expect(handler.includes("{statusCode:200,body:BAR}")).toBeTruthy();
   });
 
   test("Configuration function", async () => {
@@ -30,7 +31,8 @@ describe("Custom Webpack Config", () => {
     const handler = fs
       .readFileSync("./test/tmp/function-handler.js")
       .toString("utf-8");
-    expect(handler).toMatchSnapshot("handler");
+
+    expect(handler.includes("{statusCode:200,body:OVERWRITTEN}")).toBeTruthy();
   });
 
   test("Invalid configuration", async () => {

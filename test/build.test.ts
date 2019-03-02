@@ -10,18 +10,18 @@ test("build", async () => {
   const handlerError = fs
     .readFileSync("./test/tmp/handler-error.js")
     .toString("utf-8");
-  expect(handlerError).toMatchSnapshot("handlerError");
+  expect(handlerError.includes("{statusCode:500}")).toBeTruthy();
 
   const helloWorld = fs
     .readFileSync("./test/tmp/hello-world.js")
     .toString("utf-8");
-  expect(helloWorld).toMatchSnapshot("helloWorld");
+  expect(helloWorld.includes("Hello, world!")).toBeTruthy();
 
   const internalError = fs
     .readFileSync("./test/tmp/internal-error.js")
     .toString("utf-8");
-  expect(internalError).toMatchSnapshot("internalError");
+  expect(internalError.includes("Error")).toBeTruthy();
 
   const postOnly = fs.readFileSync("./test/tmp/post-only.js").toString("utf-8");
-  expect(postOnly).toMatchSnapshot("postOnly");
+  expect(postOnly.includes("httpMethod?204:405}")).toBeTruthy();
 });
