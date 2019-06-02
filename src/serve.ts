@@ -45,12 +45,15 @@ export async function createServer({
     callback: ({ entries, modules }) => {
       for (const lambda of entries) {
         const requestPath = path + lambda.requestPath;
-        const { source } = modules.find(build =>
+        const fnModule = modules.find(build =>
           build.identifier.includes(lambda.file)
         );
 
         // set new handler for requestPath
-        routeHandlers[requestPath] = createHandler(source, lambda.file);
+        routeHandlers[requestPath] = createHandler(
+          fnModule!.source!,
+          lambda.file
+        );
 
         if (firstRun) {
           // create route that calls handler by requestPath

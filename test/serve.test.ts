@@ -1,13 +1,16 @@
 import request = require("supertest");
 
+import { createServer } from "../src/serve";
+
 describe("serve", () => {
   let app: Express.Application;
 
   beforeEach(async done => {
-    app = await require("../src/serve").createServer({
+    app = await createServer({
       basePath: "/",
       entry: "test/fixtures",
       node: "6.10",
+      port: 9000,
       watch: false
     });
 

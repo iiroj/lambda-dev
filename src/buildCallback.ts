@@ -8,7 +8,7 @@ const prefix = chalk.grey("λ-dev");
 export type ResolveArgs = {
   entries: Entry[];
   hash?: string;
-  modules: any[];
+  modules: webpack_.Stats.FnModules[];
   warnings?: any[];
 };
 
@@ -22,7 +22,7 @@ type RejectArgs = {
 export type BuildCallback = (args: {
   entries: Entry[];
   hash?: string;
-  modules: any[];
+  modules: webpack_.Stats.FnModules[];
 }) => void;
 
 export default function getBuildCallback(
@@ -40,12 +40,14 @@ export default function getBuildCallback(
       reject({ entries, error: err });
     }
 
-    const { errors, hash, modules, warnings } = stats.toJson({
+    const { errors, hash, warnings, ...jsonStats } = stats.toJson({
       assets: true,
       errors: true,
       hash: true,
       warnings: true
     });
+
+    const modules = jsonStats.modules!;
 
     if (errors.length > 0) {
       for (const error of errors) {
@@ -66,7 +68,7 @@ export default function getBuildCallback(
       }
     }
 
-    console.log(`${prefix} Built ${chalk.green(hash)}`);
+    console.log(`${prefix} Built ${chalk.green(hash || "")}`);
 
     if (callback) {
       callback({ entries, hash, modules });
