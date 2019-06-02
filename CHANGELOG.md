@@ -1,6 +1,15 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [1.8.13](https://github.com/iiroj/lambda-dev/compare/v1.8.12...v1.8.13) (2019-06-02)
+
+
+### Bug Fixes
+
+* update types ([8225076](https://github.com/iiroj/lambda-dev/commit/8225076))
+
+
 
 ## [1.8.12](https://github.com/iiroj/lambda-dev/compare/v1.8.11...v1.8.12) (2019-04-28)
 
