@@ -31,11 +31,11 @@ export default function getEntries(
 ): Entry[] | undefined {
   try {
     const { glob, cwd } = getGlobAndCwd(entry);
-    const files = sync<string>(include || glob, {
+    const files = sync(include || glob, {
       absolute: true,
+      baseNameMatch: true,
       cwd: entry,
       ignore: exclude,
-      matchBase: true,
       onlyFiles: true,
       stats: false // return file path string
     });
