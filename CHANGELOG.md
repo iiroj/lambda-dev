@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.15](https://github.com/iiroj/lambda-dev/compare/v1.8.14...v1.8.15) (2019-07-07)
+
+
+### Build System
+
+* add husky, commitlint and lint-staged ([ea89cd7](https://github.com/iiroj/lambda-dev/commit/ea89cd7))
+
+
+
 ### [1.8.14](https://github.com/iiroj/lambda-dev/compare/v1.8.13...v1.8.14) (2019-07-06)
 
 
