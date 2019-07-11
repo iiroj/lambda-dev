@@ -43,8 +43,8 @@
     }
   },
   "dependencies": {
-    "@babel/core": "^7.5.0",
-    "@babel/preset-env": "^7.5.0",
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
     "babel-loader": "^8.0.6",
     "body-parser": "^1.19.0",
     "chalk": "^2.4.2",
@@ -52,7 +52,7 @@
     "fast-glob": "^3.0.4",
     "make-dir": "^3.0.0",
     "require-from-string": "^2.0.2",
-    "webpack": "^4.35.2",
+    "webpack": "^4.35.3",
     "webpack-merge": "^4.2.1",
     "yargs": "^13.2.4"
   },
@@ -63,7 +63,7 @@
     "@types/glob": "^7.1.1",
     "@types/jest": "^24.0.15",
     "@types/memory-fs": "^0.3.2",
-    "@types/node": "^12.0.12",
+    "@types/node": "^12.6.2",
     "@types/require-from-string": "^1.2.0",
     "@types/rimraf": "^2.0.2",
     "@types/supertest": "^2.0.8",
@@ -74,11 +74,11 @@
     "commitlint": "^8.0.0",
     "husky": "^3.0.0",
     "jest": "^24.8.0",
-    "lint-staged": "^9.1.0",
+    "lint-staged": "^9.2.0",
     "memory-fs": "^0.4.1",
     "prettier": "^1.18.2",
     "rimraf": "^2.6.3",
-    "rollup": "^1.16.6",
+    "rollup": "^1.16.7",
     "rollup-plugin-typescript2": "^0.21.2",
     "standard-version": "^6.0.1",
     "supertest": "^4.0.2",
@@ -89,7 +89,7 @@
     "tslint-config-standard": "^8.0.1",
     "tslint-plugin-prettier": "^2.0.1",
     "tslint-react": "^4.0.0",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.3"
   },
   "keywords": [
     "babel",
