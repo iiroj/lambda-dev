@@ -1,6 +1,6 @@
 # λ-dev
 
-[![CircleCI](https://circleci.com/gh/iiroj/lambda-dev.svg?style=shield)](https://circleci.com/gh/iiroj/lambda-dev)
+[![GitHub Actions](https://github.com/iiroj/lambda-dev/workflows/Tags/badge.svg)](https://github.com/iiroj/lambda-dev/actions)
 [![version](https://img.shields.io/npm/v/lambda-dev.svg)](https://www.npmjs.com/package/lambda-dev)
 [![code size](https://img.shields.io/github/languages/code-size/iiroj/lambda-dev.svg)](https://github.com/iiroj/lambda-dev)
 [![dependencies](https://img.shields.io/david/iiroj/lambda-dev.svg)](https://github.com/iiroj/lambda-dev/blob/master/package.json)
