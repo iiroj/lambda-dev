@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.20](https://github.com/iiroj/lambda-dev/compare/v1.8.19...v1.8.20) (2019-09-25)
+
 ### [1.8.19](https://github.com/iiroj/lambda-dev/compare/v1.8.18...v1.8.19) (2019-09-22)
 
 ### [1.8.18](https://github.com/iiroj/lambda-dev/compare/v1.8.17...v1.8.18) (2019-08-27)
