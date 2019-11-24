@@ -1,5 +1,5 @@
 import * as webpack_ from "webpack";
-import chalk from "chalk";
+import * as chalk from "chalk";
 
 import { Entry } from "./entries";
 

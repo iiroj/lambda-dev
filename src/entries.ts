@@ -1,4 +1,4 @@
-import chalk from "chalk";
+import * as chalk from "chalk";
 import * as fs from "fs";
 import { sync } from "fast-glob";
 import * as path from "path";

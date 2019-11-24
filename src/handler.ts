@@ -1,6 +1,6 @@
 import * as express from "express";
 import * as requireFromString_ from "require-from-string";
-import chalk from "chalk";
+import * as chalk from "chalk";
 
 // typescript namespace import doesn't work with Rollup
 const requireFromString = requireFromString_;

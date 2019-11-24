@@ -24,10 +24,7 @@ export default function getWebpackConfig({
   const path = resolve(CWD, targetDir);
 
   const entry = entries.reduce(
-    (accumulator, entry) => {
-      accumulator[entry.entry] = entry.file;
-      return accumulator;
-    },
+    (previous, { entry, file }) => ({ ...previous, [entry]: file }),
     {} as { [key: string]: string }
   );
 
@@ -65,13 +62,10 @@ export default function getWebpackConfig({
 
   const config = require(resolve(CWD, customConfig));
 
-  let mergedConfig: webpack.Configuration;
-
-  if (typeof config === "function") {
-    mergedConfig = config(defaultConfig);
-  } else {
-    mergedConfig = merge.smart(defaultConfig, config);
-  }
+  const mergedConfig: webpack.Configuration =
+    typeof config === "function"
+      ? config(defaultConfig)
+      : merge.smart(defaultConfig, config);
 
   return mergedConfig;
 }

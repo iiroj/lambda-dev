@@ -1,6 +1,6 @@
 import * as bodyParser from "body-parser";
 import * as express from "express";
-import chalk from "chalk";
+import * as chalk from "chalk";
 
 import build from "./build";
 import createHandler from "./handler";
